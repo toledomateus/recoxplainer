@@ -1,18 +1,22 @@
 base:
-  testdata:
-    filepath_or_buffer: 'datasets/fake_data.csv'
-    sep: '\t'
-    skiprows: 1
-    names: [ 'userId', 'itemId', 'rating', 'timestamp']
-  ml100k:
-      filepath_or_buffer: 'datasets/ml-100k/u.data'
+  data:
+    test:
+      filepath_or_buffer: 'datasets/fake_data.csv'
       sep: '\t'
-      skiprows: 0
+      skiprows: 1
       names: [ 'userId', 'itemId', 'rating', 'timestamp']
-  ml1m:
-    filepath_or_buffer: 'datasets/ml-1m/ratings.dat'
-    sep: '::'
-    names: [ 'userId', 'itemId', 'rating', 'timestamp' ]
+    ml100k:
+        filepath_or_buffer: 'datasets/ml-100k/u.data'
+        sep: '\t'
+        skiprows: 0
+        names: [ 'userId', 'itemId', 'rating', 'timestamp']
+        groups_filepath:
+          - 'datasets/ml-100k/groupsWithHighRatings5.txt'
+          - 'datasets/ml-100k/groupsWithModerateRatings5untested.txt'
+    ml1m:
+      filepath_or_buffer: 'datasets/ml-1m/ratings.dat'
+      sep: '::'
+      names: [ 'userId', 'itemId', 'rating', 'timestamp' ]
   model:
     gmf:
       learning_rate: 0.005
@@ -68,5 +72,3 @@ base:
       positive_threshold: 3
       knn: 10
       expl: true
-
-
