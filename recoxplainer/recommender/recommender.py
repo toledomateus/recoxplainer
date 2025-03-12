@@ -42,3 +42,5 @@ class Recommender(GenericRecommender):
 
         return self.recommend(user_id=user_id,
                               target_item_id=unrated_item_id)
+
+    
