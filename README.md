@@ -30,10 +30,10 @@ git clone https://github.com/ludovikcoba/recoxplainer.git
 Create environment on conda:
 
 ```buildoutcfg
-conda create -n recoxplainer python=3.6 
+conda create -n recoxplainer python=3.11 
 ```
 
-RecoXplainer was developed with python 3.6. 
+RecoXplainer was developed with python 3.11. 
 Activate the new environment:
 
 ```buildoutcfg
@@ -46,10 +46,6 @@ Install torch as explained in https://pytorch.org/, we are using the version wit
 
 When torch is installed navigate to the folder where you cloned the library and run:
 
-```buildoutcfg
-pip install -r requirements.txt
-```
-This command will install all the dependencies.
 Next, install the _recoxplainer_:
 ```buildoutcfg
 pip install -e .
